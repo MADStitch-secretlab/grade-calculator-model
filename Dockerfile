@@ -27,5 +27,8 @@ ENV PYTHONUNBUFFERED=1
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
     CMD python -c "import requests; requests.get('http://localhost:8000/health')"
 
+# 포트는 환경 변수에서 가져오거나 기본값 8000 사용
+ENV PORT=8000
+
 # Uvicorn으로 FastAPI 앱 실행 (로그 활성화)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level", "info", "--access-log", "--use-colors", "false"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --log-level info --access-log --use-colors false"]
