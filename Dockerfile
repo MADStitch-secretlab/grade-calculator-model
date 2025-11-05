@@ -20,9 +20,12 @@ COPY ./tests ./tests
 # 포트 설정
 EXPOSE 8000
 
+# Python 출력 버퍼링 비활성화 (로그 즉시 표시)
+ENV PYTHONUNBUFFERED=1
+
 # 헬스체크 설정
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
     CMD python -c "import requests; requests.get('http://localhost:8000/health')"
 
-# Uvicorn으로 FastAPI 앱 실행
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Uvicorn으로 FastAPI 앱 실행 (로그 활성화)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level", "info", "--access-log", "--use-colors", "false"]
