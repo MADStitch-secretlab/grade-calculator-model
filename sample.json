@@ -1,0 +1,56 @@
+{
+  "scale_max": 4.5,
+  "G_t": 4.2,
+  "C_tot": 130,
+  "history": [
+    {
+      "term_id": "S1",
+      "credits": 18,
+      "achieved_avg": 3.8
+    },
+    {
+      "term_id": "S2",
+      "credits": 18,
+      "achieved_avg": 3.9
+    }
+  ],
+  "terms": [
+    {
+      "id": "S3",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S4",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S5",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S6",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S7",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S8",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    }
+  ]
+}
+

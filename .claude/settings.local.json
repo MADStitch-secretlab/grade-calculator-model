@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(python3 -m pip install:*)",
+      "Bash(python3 -m pytest:*)",
+      "Bash(tree:*)",
+      "Bash(python3 -m uvicorn:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9)",
+      "Bash(kill:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
